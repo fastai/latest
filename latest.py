@@ -6,7 +6,10 @@ from fastcore.foundation import *
 from warnings import warn
 import sys,os
 
-@fastcgi('/var/run/caddy/fcgi.sock')
+sock = '/var/run/caddy/fcgi.sock'
+if os.path.exists(sock): os.unlink(sock)
+
+@fastcgi(sock)
 def run():
     print(f'Content-type: text/plain\n')
     try: _,user,repo = os.environ['PATH_INFO'].split('/')
