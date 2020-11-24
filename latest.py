@@ -15,5 +15,5 @@ def run():
         return
 
     rels=L(urljson(f'https://api.github.com/repos/{user}/{repo}/releases/latest')['assets'])
-    print('\n'.join(rels.itemgot('name')))
+    print('\n'.join(rels.itemgot('browser_download_url')))
 
