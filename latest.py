@@ -13,10 +13,8 @@ if os.path.exists(sock): os.unlink(sock)
 def run():
     print(f'Content-type: text/plain\n')
     try: _,user,repo = os.environ['PATH_INFO'].split('/')
-    except ValueError:
-        print('!!!Invalid path')
-        return
-
-    rels=L(urljson(f'https://api.github.com/repos/{user}/{repo}/releases/latest')['assets'])
-    print('\n'.join(rels.itemgot('browser_download_url')))
+    except ValueError: return print('!!!Invalid path')
+    try: rels=urljson(f'https://api.github.com/repos/{user}/{repo}/releases/latest')['assets']
+    except: return print(f'!!!Could not access {user}/{repo}')
+    print('\n'.join(L(rels).itemgot('browser_download_url')))
 
