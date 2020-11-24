@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 from fastcgi import *
-from fastcore.script import *
-from fastcore.utils import *
-from fastcore.foundation import *
-from warnings import warn
-import sys,os
+from fastcore.all import *
 
 @fastcgi('/var/run/caddy/fcgi.sock')
 def run():
@@ -14,4 +10,3 @@ def run():
     try: rels=urljson(f'https://api.github.com/repos/{user}/{repo}/releases/latest')['assets']
     except: return print(f'!!!Could not access {user}/{repo}')
     print('\n'.join(L(rels).itemgot('browser_download_url')))
-
