@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "latest"
+  site-url: "https://fastai.github.io/latest"
+  description: "latest.fast.ai server"
+  repo-branch: master
+  repo-url: "https://github.com/fastai/latest"
