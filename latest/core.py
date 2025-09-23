@@ -14,7 +14,7 @@ from fastcore.all import *
 def find_releases(path:str):
     "Given a path, find the latest/pre release versions available"
     try: pre,user,repo,*search = path.split('/')
-    except ValueError: return '!!!Invalid path'
+    except ValueError: return '!!!Err: Invalid path'
     if pre not in ('pre', 'latest'): return '!!!first component should be "pre" or "latest"'
     gh = f'https://api.github.com/repos/{user}/{repo}/releases'
     if pre=='latest': gh += '/latest'
