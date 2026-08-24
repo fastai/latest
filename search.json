@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfind_releases\ndef find_releases(\n    path:str\n):\nGiven a path, find the latest/pre release versions available\n\nfind_releases('latest/pytorch/pytorch')\n\n'https://github.com/pytorch/pytorch/releases/download/v2.8.0/pytorch-v2.8.0.tar.gz'\n\n\n\nfind_releases('latest/caddyserver/caddy/linux_amd64.tar.gz$')\n\n'https://github.com/caddyserver/caddy/releases/download/v2.10.2/caddy_2.10.2_linux_amd64.tar.gz'\n\n\n\nprint(find_releases('pre/electron/electron/darwin-arm64'))\n\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/chromedriver-v39.0.0-alpha.5-darwin-arm64.zip\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/electron-v39.0.0-alpha.5-darwin-arm64-dsym-snapshot.zip\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/electron-v39.0.0-alpha.5-darwin-arm64-dsym.zip\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/electron-v39.0.0-alpha.5-darwin-arm64-symbols.zip\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/electron-v39.0.0-alpha.5-darwin-arm64.zip\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/ffmpeg-v39.0.0-alpha.5-darwin-arm64.zip\nhttps://github.com/electron/electron/releases/download/v39.0.0-alpha.5/mksnapshot-v39.0.0-alpha.5-darwin-arm64.zip\n\n\n\nfind_releases('invalid')\n\n'!!!Err: Invalid path'\n\n\n\n# Test non-existent repo\nfind_releases('latest/nonexistent/repo')\n\n'!!!Could not access https://api.github.com/repos/nonexistent/repo/releases/latest; HTTP Error 404: Not Found\\n====Error Body====\\n{\\n  \"message\": \"Not Found\",\\n  \"documentation_url\": \"https://docs.github.com/rest/releases/releases#get-the-latest-release\",\\n  \"status\": \"404\"\\n}\\n'",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "latest",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "latest"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "latest",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall latest in Development mode\n# make sure latest package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to latest\n$ nbdev_prepare",
+    "crumbs": [
+      "latest"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "latest",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/fastai/latest.git\nor from conda\n$ conda install -c fastai latest\nor from pypi\n$ pip install latest\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "latest"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "latest",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "latest"
+    ]
+  }
+]
